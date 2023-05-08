@@ -4,7 +4,7 @@ import TodoList from "./components/TodoList";
 import SubmitForm from "./components/SubmitForm";
 
 import ThemeContext from "./contexts/ThemeContext";
-import { Container, Box } from "@mui/material";
+import { Container, Box, Button, Typography } from "@mui/material";
 
 const App = () => {
   const [todos, setTodos] = useState([]);
@@ -67,21 +67,19 @@ const App = () => {
                 : "rgba(50, 50, 50, 0.3)",
           }}
         >
-          <h1>Todo App</h1>
+          <Typography variant="h2">Todo App</Typography>
           <div>
             <p>Anzahl der Todos: {todos.length}</p>
             <p>Anzahl der offenen Todos: {openTodos.length}</p>
-            <button
+            <Button
+              variant="contained"
+              color="secondary"
+              fullWidth="true"
               onClick={toggleTheme}
-              style={{
-                display: "block",
-                width: "100%",
-                marginTop: "5px",
-                marginBottom: "5px",
-              }}
+              sx={{ mt: 2, mb: 2 }}
             >
               Toggle theme
-            </button>
+            </Button>
           </div>
 
           <SearchForm search={search} setSearch={setSearch} />
