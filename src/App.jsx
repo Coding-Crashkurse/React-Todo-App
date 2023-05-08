@@ -63,8 +63,8 @@ const App = () => {
             borderRadius: "1rem",
             backgroundColor:
               theme === "dark"
-                ? "rgba(120, 120, 120, 0.8)"
-                : "rgba(255, 204, 153, 0.8)",
+                ? "rgba(30, 30, 30, 0.5)"
+                : "rgba(50, 50, 50, 0.3)",
           }}
         >
           <h1>Todo App</h1>
